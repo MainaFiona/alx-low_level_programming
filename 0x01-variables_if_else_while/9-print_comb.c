@@ -1,21 +1,21 @@
 #include <stdio.h>
 /**
- * main - main function
+ * main - program that prints single numbers with putchar without char
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
 	int i;
-	char c;
 
 	for (i = 0; i < 10; i++)
 	{
 		putchar(i + '0');
-	}
-	for (c = 'a'; c <= 'f'; c++)
-	{
-		putchar(c);
+		if (i != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 	return (0);
