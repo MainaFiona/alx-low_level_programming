@@ -1,10 +1,5 @@
 #include <stdio.h>
-/**
- * main -main function
- *
- * Return: always 0
- */
+#include <stdlib.h>
+
 int main(void)
-{
-	
-}
+
