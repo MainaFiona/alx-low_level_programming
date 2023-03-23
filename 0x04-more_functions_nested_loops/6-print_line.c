@@ -3,7 +3,7 @@
 /**
  * print_line - function that draws a straight line
  *
- *
+ * @n: integer to print
  */
 void print_line(int n)
 {
@@ -19,6 +19,5 @@ void print_line(int n)
 		{
 			_putchar('_');
 		}
-				
 	}
 }
