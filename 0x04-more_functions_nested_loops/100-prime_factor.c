@@ -9,8 +9,8 @@
  */
 int main(void)
 {
-	long number = 612852475143;
-	long factor = 2;
+	unsigned long number = 612852475143;
+	unsigned long factor = 2;
 
 	while (factor < number)
 	{
