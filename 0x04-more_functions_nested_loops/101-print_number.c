@@ -1,16 +1,26 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
  * print_number - prints an integer
- *
- * @n: interger to print
- * Return: Always 0 (Success)
+ * @n: integer to be printed
  */
 void print_number(int n)
 {
-	for (n = 0; n < 10; n++)
+	unsigned int i;
+
+	if (n < 0)
 	{
-		printf("%d", n);
+		i = -n;
+		_putchar('-');
+	} else
+	{
+		i = n;
 	}
-	printf("\n");
-	return (0);
+
+	if (i / 10)
+	{
+		print_number(i / 10);
+	}
+
+	_putchar((i % 10) + '0');
 }
