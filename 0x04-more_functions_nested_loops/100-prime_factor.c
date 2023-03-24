@@ -9,7 +9,19 @@
  */
 int main(void)
 {
-	long int i;
-	long int j;
-	long int max;
+	long number = 612852475143;
+	long factor = 2;
+
+	while (factor < number)
+	{
+		if (number % factor == 0)
+		{
+			number /= factor;
+			printf("factors: %lu remainder: %lu\n", factor, number);
+		}
+		else
+			factor++;
+	}
+	printf("%lu\n", number);
+	return (0);
 }
