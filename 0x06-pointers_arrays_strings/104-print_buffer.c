@@ -9,9 +9,9 @@
  */
 void print_buffer(char *b, int size)
 {
-	int i; 
-	int j; 
-	int k; 
+	int i;
+	int j;
+	int k;
 
 	if (size <= 0)
 	{
