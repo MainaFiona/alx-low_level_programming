@@ -16,11 +16,12 @@ char *rot13(char *c)
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		for (j = 0; a[j] != '\0'; j++)
+		for (j = 0; j < 52; j++)
 		{
 			if (c[i] == a[j])
 			{
 				c[i] = b[j];
+				break;
 			}
 		}
 	}
