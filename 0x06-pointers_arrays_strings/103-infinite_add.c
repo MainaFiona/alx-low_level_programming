@@ -8,16 +8,16 @@
  * @r: pointer to buffer
  * @size_r: buffer size
  * Return: pointer to calling function
- */ 
+ */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = 0; c1
-	int j = 0; c2
-	int k = 0; add
-	int l; op
-	int m;bg
-	int n;dr1
-	int p;dr2
+	int i = 0;
+	int j = 0;
+	int k = 0;
+	int l;
+	int m;
+	int n;
+	int p;
 
 	while (*(n1 + i) != '\0')
 	{
@@ -45,7 +45,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	while (m >= 0)
 	{
 		l = n + p + k;
-		if(l >= 10)
+		if (l >= 10)
 		{
 			k = l / 10;
 		}
