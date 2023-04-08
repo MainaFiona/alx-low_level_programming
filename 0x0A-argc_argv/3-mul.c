@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - multiplies two numbers
@@ -8,11 +9,16 @@
  */
 int main(int argc __attribute__((unused)), char *argv[])
 {
-	int i;
+	int i, j, total;
 
-	for (i = 0; i < argc; i++)
+	if (argc != 3)
 	{
-		printf("%s\n", argv[i]);
+		printf("Error\n");
+		return (1);
 	}
+	i = atoi(argv[1]);
+	j = atoi(argv[2]);
+	total = i * j;
+	printf("%d\n", total);
 	return (0);
 }
