@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints all arguments it receives
+ * main - multiplies two numbers
  * @argc: parameter
  * @argv: an array
  * Return: always 0
