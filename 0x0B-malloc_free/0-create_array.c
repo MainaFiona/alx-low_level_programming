@@ -3,7 +3,7 @@
 
 /**
  * *create_array - creates an array of chars and initializes it
- * @c: character to initialize 
+ * @c: character to initialize
  * @size: the size of the memory to print
  *
  * Return: Nothing.
@@ -17,7 +17,7 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	s = (char*)malloc(size * sizeof(char));
+	s = (char *)malloc(size * sizeof(char));
 	if (s == NULL)
 	{
 		return (NULL);
