@@ -2,7 +2,6 @@
 #include "dog.h"
 #include <stdlib.h>
 
-dog_t *new_dog(char *name, float age, char *owner);
 char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
 
