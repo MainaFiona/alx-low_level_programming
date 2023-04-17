@@ -43,7 +43,7 @@ int _strlen(char *s)
 }
 
 /**
- * new_dog - creates a new dog function
+ * *new_dog - creates a new dog function
  * @name: name of the dog
  * @age: age of the dog
  * @owner: owner of the dog
