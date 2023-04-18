@@ -3,25 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-int _strlen(char *s);
-
-
-/**
- * _strlen - returns the length os a string
- *
- * @s: character to get string
- * Return: return length of a string
- */
-int _strlen(char *s)
-{
-	int i;
-
-	for (i = 0; s[i] != '\0'; ++i)
-	{
-	}
-	return (i);
-}
-
 /**
  * *new_dog - creates a new dog function
  * @name: name of the dog
@@ -38,13 +19,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		return (NULL);
 	}
-	d->name = (char *)malloc((_strlen(name) + 1) * sizeof(char));
+	d->name = (char *)malloc((strlen(name) + 1) * sizeof(char));
 	if (d->name == NULL)
 	{
 		free(d);
 		return (NULL);
 	}
-	d->owner = (char *)malloc((_strlen(owner) + 1) * sizeof(char));
+	d->owner = (char *)malloc((strlen(owner) + 1) * sizeof(char));
 	if (d->owner == NULL)
 	{
 		free(d->owner);
