@@ -1,29 +1,10 @@
 #include <stdio.h>
 #include "dog.h"
 #include <stdlib.h>
+#include <string.h>
 
-char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
 
-/**
- * _strcpy - main function to copy
- *
- * @dest: destination to copy
- * @src: source
- *
- * Return: destination
- */
-char *_strcpy(char *dest, char *src)
-{
-	int i;
-
-	for (i = 0; src[i] != '\0'; i++)
-	{
-		dest[i] = src[i];
-	}
-	dest[i++] = '\0';
-	return (dest);
-}
 
 /**
  * _strlen - returns the length os a string
@@ -66,16 +47,16 @@ dog_t *new_dog(char *name, float age, char *owner)
 	d->owner = (char *)malloc((_strlen(owner) + 1) * sizeof(char));
 	if (d->owner == NULL)
 	{
-		free(d);
 		free(d->owner);
+		free(d);
 		return (NULL);
 	}
 	if (name == NULL || owner == NULL || age <= 0)
 	{
 		return (NULL);
 	}
-	d->name = _strcpy(d->name, name);
-	d->owner = _strcpy(d->owner, owner);
+	d->name = strcpy(d->name, name);
 	d->age = age;
+	d->owner = strcpy(d->owner, owner);
 	return (d);
 }
