@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < k; i++)
 	{
-		printf("%02x", k[i] & 0xFF);
+		printf("%02x", f[i] & 0xFF);
 		if (i != k - 1)
 		{
 			printf(" ");
