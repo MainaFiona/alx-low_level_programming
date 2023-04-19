@@ -18,13 +18,12 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(1);
 	}
+	k = atoi(argv[1]);
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(2);
 	}
-	k = atoi(argv[2]);
-
 	for (i = 0; i < k; i++)
 	{
 		printf("%02x", f[i] & 0xFF);
