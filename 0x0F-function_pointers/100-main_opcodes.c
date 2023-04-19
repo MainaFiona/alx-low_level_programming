@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	k = atoi(argv[1]);
+	k = atoi(argv[2]);
 
 	for (i = 0; i < k; i++)
 	{
