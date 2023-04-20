@@ -69,12 +69,12 @@ void print_all(const char * const format, ...)
 		{ NULL, NULL}
 	};
 	va_start(valist, format);
-	while (format[i] && format != NULL)
+	while (format[i] && format)
 	{
 		j = 0;
 		while (j < 4)
 		{
-			if (format[j] == *ops[j].c)
+			if (format[j] == *(ops[j].c))
 			{
 				printf("%s", separator);
 				ops[j].f(valist);
