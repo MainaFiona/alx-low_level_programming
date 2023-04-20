@@ -8,41 +8,46 @@
  * @ap: list of variadic
  * Return: Always 0.
  */
-void print_a_char(va_list ap)
+int print_a_char(va_list ap)
 {
 	printf("%c", va_arg(ap, int));
+	return (0);
 }
 /**
  * print_a_int - function that prints integer
  * @ap: list of variadic
  * Return: Always 0.
  */
-void print_a_int(va_list ap)
+int print_a_int(va_list ap)
 {
 	printf("%d", va_arg(ap, int));
+	return (0);
 }
 /**
  * print_a_float - function that prints float
  * @ap: list of variadic
  * Return: Always 0.
  */
-void print_a_float(va_list ap)
+int print_a_float(va_list ap)
 {
 	printf("%f", va_arg(ap, double));
+	return (0);
 }
 /**
  * print_a_str - function that prints string
  * @ap: list of variadic
  * Return: Always 0.
  */
-void print_a_str(va_list ap)
+int print_a_str(va_list ap)
 {
 	char *str = va_arg(ap, char *);
 	if (str == NULL)
 	{
 		printf("(nil)");
+		return (0);
 	}
 	printf("%s", str);
+	return (0);
 }
 /**
  * print_all - function that prints anything
