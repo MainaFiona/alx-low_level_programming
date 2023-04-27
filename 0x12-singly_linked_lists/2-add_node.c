@@ -19,7 +19,7 @@ list_t *add_node(list_t **head, const char *str)
 	{
 		return (NULL);
 	}
-	if (str[i])
+	while (str[i])
 	{
 		i++;
 	}
