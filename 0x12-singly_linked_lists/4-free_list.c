@@ -18,4 +18,5 @@ void free_list(list_t *head)
 		tempNode = head->next;
 		free(head);
 		head = tempNode;
+	}
 }
