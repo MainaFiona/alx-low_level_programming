@@ -19,7 +19,7 @@ int pop_listint(listint_t **head)
 		return (-1);
 	}
 	nextNode = (*head)->next;
-	retval =(*head)->n;
+	retval = (*head)->n;
 	free(*head);
 	*head = nextNode;
 
