@@ -5,9 +5,10 @@
 #include <string.h>
 
 /**
- * *get_nodeint_at_index - function that returns the nth node of a list
+ * get_nodeint_at_index - function that returns the nth node of a list
  * @head: start of node
  * @index: the index of the node, starting at 0
+ * Return: nth node
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
