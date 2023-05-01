@@ -15,6 +15,10 @@ void free_listint2(listint_t **head)
 
 	cnode = *head;
 
+	if (head == NULL)
+	{
+		return;
+	}
 	while (cnode)
 	{
 		tnode = cnode->next;
