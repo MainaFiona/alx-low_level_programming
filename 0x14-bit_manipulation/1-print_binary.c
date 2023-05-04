@@ -9,7 +9,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int i = 1;
+	unsigned long int i = 1;
 
 	for (; i < n; i <<= 1)
 	{
