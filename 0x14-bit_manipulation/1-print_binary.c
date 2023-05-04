@@ -9,12 +9,28 @@
  */
 void print_binary(unsigned long int n)
 {
-	if (n == 0)
+	unsigned int i = 1;
+
+	for (; i < n; i <<= 1)
 	{
-		_putchar('0');
+		if (i > i << 1)
+		{
+			break;
+		}
 	}
-	else
+	if (n != 0 && i > n)
 	{
-		print_rec(n);
+		i >>= 1;
+	}
+	for (; i > 0; i >>= 1)
+	{
+		if (n & i)
+		{
+			_putchar('1');
+		}
+		else
+		{
+			_putchar('0');
+		}
 	}
 }
