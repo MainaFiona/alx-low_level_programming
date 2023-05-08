@@ -8,9 +8,10 @@
  */
 int main(int argc, char *argv[])
 {
-	int f1, f2, f3;
+	int f1, f2;
 	int count1, count2;
 	char buffer[1024];
+
 
 	if (argc != 3)
 	{
@@ -33,7 +34,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
                 exit(98);
 	}
-	f2 = open(argv[2], O_TRUNC | 0_CREATE | O_WRONLY, perm);
+	f2 = open(argv[2], O_TRUNC | 0_CREATE | O_WRONLY, 0664);
 	while ((f3 == read(f1, buffer, 1024)) > 0) 
 	{
 		if (f3 == -1 || (write(f1, buffer, f3) != f3))
