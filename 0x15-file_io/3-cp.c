@@ -9,7 +9,8 @@
 int main(int argc, char *argv[])
 {
 	int f1, f2;
-	int count1, count2;
+	int byt = 0;
+	int nbyt= 0;
 	char buffer[1024];
 
 
@@ -32,26 +33,27 @@ int main(int argc, char *argv[])
 	}
 	do
 	{
-		count1 = read(f1, buffer, 1024); 
-		if (count1 == -1)
+		byt = read(f1, buffer, 1024); 
+		if (byt == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
-		if (count2 == -1)
+		nbyt = wrire(f2, buffer, byt);
+		if (nbyt == -1)
                 {
                         dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
                         exit(99);
                 }
-	} while (count1 == 1024)
-	if (count1(f1) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-                exit(98);
-	}
-	if (count2(f2) == -1)
+	} while (byt == 1024)
+	if (close(f1) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f1);
+                exit(100);
+	}
+	if (close(f2) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f2);
                 exit(100);
 	}
 	return (0);
